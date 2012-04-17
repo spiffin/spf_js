@@ -1,11 +1,13 @@
-JavaScript management
-=====================
+spf_js JavaScript management for Textpattern
+============================================
 
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
 
 **This plugin is unlikely to work on Textpattern versions prior to
 4.4.1.**
+
+REQUIRES: Texpattern 4.4.1 (or newer) + PHP 5
 
 Please read the instructions and notes below before use.
 

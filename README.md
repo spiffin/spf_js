@@ -1,5 +1,7 @@
-spf_js JavaScript management for Textpattern
-============================================
+spf_js
+======
+
+JavaScript management for [Textpattern][]
 
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
@@ -31,7 +33,7 @@ Re-written for Textpattern 4.4.1 to mimic the Presentation \> Style tab.
 1.  Create a directory for the static JavaScript files in the root of
     your textpattern installation. You should make sure that
     <span class="caps">PHP</span> is able to write to that directory.
-2.  Visit the [advanced preferences][] and make sure the “JavaScript
+2.  Visit the Advanced Preferences (Admin > Preferences > Advanced) and make sure the “JavaScript
     directory” preference contains the directory you created in step 1
     (by default ‘js’). This path is relative path to the directory of
     your root Textpattern installation.
@@ -129,8 +131,7 @@ you can edit each string to your own language preferences.
 
 0.1 - April 2012 - first release.
 
-  [GitHub repository]: https://github.com/spiffin/spf_js
+  [Textpattern]: http://www.textpattern.com/
   [Stanislav Müller]: https://github.com/lifedraft/stm_javascript
   [Ruud van Melick]: http://vanmelick.com/
-  [advanced preferences]: index.php?event=prefs&step=advanced_prefs
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp

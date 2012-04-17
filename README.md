@@ -1,7 +1,7 @@
 spf_js
 ======
 
-JavaScript management for [Textpattern][]
+JavaScript management for [Textpattern][].
 
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
@@ -9,8 +9,6 @@ to external files.
 **REQUIRES: Texpattern 4.4.1 (or newer) + PHP 5.**
 
 Please read the instructions and notes below before use.
-
-[GitHub repository][]
 
 A combination of two previously-released plugins: stm\_javascript by
 [Stanislav Müller][] and rvm\_css by [Ruud van Melick][]. Thanks to the
@@ -20,6 +18,7 @@ help.
 Features include exporting scripts as files to a directory, optional
 “type” attribute `type="text/javascript"` and changing the tag argument
 from `n=` to `name=` to bring it in line with default css syntax.
+
 Re-written for Textpattern 4.4.1 to mimic the Presentation \> Style tab.
 
   

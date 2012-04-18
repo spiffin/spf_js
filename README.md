@@ -118,7 +118,7 @@ both plugins simultaneously.
 
 This plugin installs an English Textpack by default.
 
-To use your own language see the spf_js_textpack file in this repository.
+To use your own language see the [spf_js_textpack][] file in this repository.
   
 
 * * * * *
@@ -131,3 +131,4 @@ To use your own language see the spf_js_textpack file in this repository.
 
   [Textpattern]: http://www.textpattern.com/
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp
+  [spf_js_textpack]: https://github.com/spiffin/spf_js/blob/master/spf_js_textpack.txt

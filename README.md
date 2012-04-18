@@ -6,14 +6,14 @@ JavaScript management for [Textpattern][].
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
 
-**REQUIRES: Texpattern 4.4.1 (or newer) + PHP 5.**
+**REQUIRES: Texpattern 4.4.1 and PHP 5.**
 
 Please read the instructions and notes below before use.
 
 A combination of two previously-released plugins: stm\_javascript by
-[Stanislav Müller][] and rvm\_css by [Ruud van Melick][]. Thanks to the
-original authors and to Jukka (Gocom) and Stef (Bloke) for feedback and
-help.
+Stanislav Müller and rvm\_css by Ruud van Melick. Thanks to the
+original authors and to Jukka (Gocom) and Stef (Bloke) for invaluable 
+feedback.
 
 Features include exporting scripts as files to a directory, optional
 “type” attribute `type="text/javascript"` and changing the tag argument
@@ -116,10 +116,9 @@ both plugins simultaneously.
 
 ### Languages
 
-At the beginning of the plugin code (Admin \> Plugins \> spf\_js \>
-Edit) you’ll find the language function (function spf\_js\_gTxt) where
-you can edit each string to your own language preferences.
+This plugin installs an English Textpack by default.
 
+To use your own language see the spf_js_textpack file in this repository.
   
 
 * * * * *
@@ -131,6 +130,4 @@ you can edit each string to your own language preferences.
 0.1 - April 2012 - first release.
 
   [Textpattern]: http://www.textpattern.com/
-  [Stanislav Müller]: https://github.com/lifedraft/stm_javascript
-  [Ruud van Melick]: http://vanmelick.com/
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp

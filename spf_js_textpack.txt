@@ -1,0 +1,33 @@
+spf_js Textpack (en_gb)
+
+To install a Textpack for your own language:
+
+- copy the 16 lines of code below into a text editor;
+
+- change line 2 to relect your own language (e.g. #@language fr-fr for French);
+
+- edit the strings after => to your own language;
+
+- copy and paste your 16 lines into the 'Install Textpack' window at the bottom of the Admin > Preferences > Language admin panel;
+
+- click Upload and you're done.
+
+Note: Textpacks will be removed when you delete this plugin
+
+
+#@spf_js
+#@language en-gb
+spf_javascript => JavaScript
+spf_js_dir => JavaScript directory
+spf_script_name => Name for this script
+spf_edit_script => You are editing script
+spf_copy_script => …or copy script as
+spf_all_scripts => All Scripts
+spf_create_new_script => Create new script
+spf_script_created => Script created
+spf_script_exists => Script already exists
+spf_script_name_required => Script name required
+spf_script_updated => Script updated
+spf_script_deleted => Script deleted
+spf_cannot_delete_default_script => Cannot delete default script
+spf_file_not_found => JavaScript file not found

@@ -92,6 +92,7 @@ will output:
 3.  The plugin will throw an error if you try to embed a non-existent
     script - similar to:
     `Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"`.
+
     In which case check the script exists and your embed tag typos.
 
   

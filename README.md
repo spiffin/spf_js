@@ -21,7 +21,8 @@ from `n=` to `name=` to bring it in line with default css syntax.
 
 Re-written for Textpattern 4.4.1 to mimic the Presentation \> Style tab.
 
-  
+Download: [TEXT][] or [ZIPPED][].
+
 
 * * * * *
 
@@ -130,5 +131,7 @@ To use your own language see the [spf_js_textpack][] file in this repository.
 0.1 - April 2012 - first release.
 
   [Textpattern]: http://www.textpattern.com/
+  [TEXT]: https://github.com/spiffin/spf_js/blob/master/spf_js_v0.1.txt
+  [ZIPPED]: https://github.com/spiffin/spf_js/blob/master/spf_js_v0.1.txt.zip
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp
   [spf_js_textpack]: https://github.com/spiffin/spf_js/blob/master/spf_js_textpack.txt

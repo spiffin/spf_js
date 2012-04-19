@@ -93,7 +93,7 @@ will output:
     script - similar to:
     `Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"`.
 
-    In which case check the script exists and your embed tag typos.
+    In which case check the script exists and your embed tag for typos.
 
   
 

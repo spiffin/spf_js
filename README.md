@@ -91,9 +91,8 @@ will output:
 2.  The plugin will convert your script names to lowercase.
 3.  The plugin will throw an error if you try to embed a non-existent
     script - similar to:
-    `Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"`
-    in which case check your name attribute for typos and/or missing
-    scripts.
+    `Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"`.
+    In which case check the script exists and your embed tag typos.
 
   
 

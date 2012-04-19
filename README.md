@@ -6,7 +6,7 @@ JavaScript management for [Textpattern][].
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
 
-**REQUIRES: Texpattern 4.4.1 and PHP 5.**
+REQUIRES: Texpattern 4.4.1 and PHP 5.
 
 Please read the instructions and notes below before use.
 
@@ -116,7 +116,7 @@ both plugins simultaneously.
 
 ### Languages
 
-This plugin installs an English Textpack by default.
+This plugin uses an English Textpack by default.
 
 To use your own language see the [spf_js_textpack][] file in this repository.
   

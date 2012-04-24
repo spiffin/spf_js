@@ -1,7 +1,7 @@
 spf_js
 ======
 
-JavaScript management for [Textpattern][].
+a JavaScript management plugin for [Textpattern][].
 
 Create, edit and delete scripts in Textpattern admin and export on save
 to external files.
@@ -21,7 +21,8 @@ from `n=` to `name=` to bring it in line with default css syntax.
 
 Re-written for Textpattern 4.4.1 to mimic the Presentation \> Style tab.
 
-Download: [TEXT][] or [ZIPPED][].
+
+[DOWNLOAD][]
 
 
 * * * * *
@@ -89,10 +90,10 @@ will output:
     they’ll be stripped).
 2.  The plugin will convert your script names to lowercase.
 3.  The plugin will throw an error if you try to embed a non-existent
-    script - similar to
-    `Tag error:   ->  Textpattern Notice: The requested resource was not found. "missing_script"`
-    - in which case check your name attribute for typos and/or missing
-    scripts.
+    script - similar to:
+    `Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"`.
+
+    In which case check the script exists and your embed tag for typos.
 
   
 
@@ -132,7 +133,6 @@ To use your own language see the [spf_js_textpack][] file in this repository.
 0.1 - April 2012 - first release.
 
   [Textpattern]: http://www.textpattern.com/
-  [TEXT]: https://github.com/spiffin/spf_js/blob/master/spf_js_v0.1.txt
-  [ZIPPED]: https://github.com/spiffin/spf_js/blob/master/spf_js_v0.1.txt.zip
+  [DOWNLOAD]: https://raw.github.com/spiffin/spf_js/master/spf_js_v0.1.txt
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp
-  [spf_js_textpack]: https://github.com/spiffin/spf_js/blob/master/spf_js_textpack.txt
+  [spf_js_textpack]: https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt

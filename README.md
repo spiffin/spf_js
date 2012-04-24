@@ -115,9 +115,10 @@ both plugins simultaneously.
 
   
 
-### Languages
+### Language support (Textpack)
 
-This plugin uses an English Textpack by default.
+This plugin uses an English Textpack by default and installs both French (fr-fr) 
+and German (de-de) Textpacks.
 
 To use your own language see the [spf_js_textpack][] file in this repository.
   

@@ -3,7 +3,7 @@ spf_js Textpack (en_gb)
 To install a Textpack for your own language:
 
 - copy the 16 lines of code below into a text editor;
-- change line 2 to relect your own language (e.g. for French: #@language fr-fr);
+- change line 2 to relect your own language (e.g. for Spanish: #@language es-es);
 - edit the strings after => to your own language - but leave {name} as it is;
 - copy and paste your 16 lines into the 'Install Textpack' window at the bottom of the Admin > Preferences > Language admin panel;
 - click Upload and you're done.

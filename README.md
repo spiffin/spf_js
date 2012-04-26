@@ -131,7 +131,7 @@ To use your own language see the [spf_js_textpack][] file in this repository.
 ### Version history
 
 0.2 - April 2012
-*  French & German Textpacks added (thanks Patrick & Uli);
+* French & German Textpacks added (thanks Patrick & Uli);
 * added compatibility with forthcoming Codemirror admin theme.
 
 0.1 - April 2012

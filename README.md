@@ -132,7 +132,7 @@ To use your own language see the [spf_js_textpack][] file in this repository.
 
 0.2 - April 2012
 * French & German Textpacks added (thanks Patrick & Uli);
-* added compatibility with forthcoming Codemirror admin theme.
+* added compatibility with the syntax-highlighting [Codemirror admin theme][].
 
 0.1 - April 2012
 * first release.
@@ -141,3 +141,4 @@ To use your own language see the [spf_js_textpack][] file in this repository.
   [DOWNLOAD]: https://raw.github.com/spiffin/spf_js/master/spf_js_v0.1.txt
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp
   [spf_js_textpack]: https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt
+  [Codemirror admin theme]: https://github.com/spiffin/CodeMirrorTextpattern

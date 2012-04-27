@@ -138,7 +138,7 @@ To use your own language see the [spf_js_textpack][] file in this repository.
 * first release.
 
   [Textpattern]: http://www.textpattern.com/
-  [DOWNLOAD]: https://raw.github.com/spiffin/spf_js/master/spf_js_v0.1.txt
+  [DOWNLOAD]: https://raw.github.com/spiffin/spf_js/master/spf_js_v0.2.txt
   [“type” attribute]: http://www.w3schools.com/html5/tag_script.asp
   [spf_js_textpack]: https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt
   [Codemirror admin theme]: https://github.com/spiffin/CodeMirrorTextpattern

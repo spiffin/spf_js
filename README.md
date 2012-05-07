@@ -105,8 +105,8 @@ will output:
 
 If stm\_javascript is installed and activated you will see two
 JavaScript tabs in Presentation - one named ‘Javascript’
-(stm\_javascript - with lowercase ’s’) and another ‘JavaScript’ (spf\_js
-- uppercase ‘S’). You can copy and paste scripts from stm\_javascript to
+(stm\_javascript - with lowercase ’s’) and another ‘JavaScript’ (spf\_js - uppercase ‘S’). 
+You can copy and paste scripts from stm\_javascript to
 spf\_js - and then disable stm\_javascript. It’s not advisable to run
 both plugins simultaneously.
 

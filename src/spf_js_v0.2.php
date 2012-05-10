@@ -1,3 +1,5 @@
+<?php
+
 /**
  * spf_js - JavaScript management for Textpattern
  *
@@ -405,3 +407,5 @@ function spf_js_delete() {
 
     }
 }
+
+?>

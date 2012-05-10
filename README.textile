@@ -58,7 +58,7 @@ h2. Notes:
 # The plugin will convert your script names to lowercase.
 # The plugin will throw an error if you try to embed a non-existent script - similar to: @Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"@.
 
-p. In which case check the script exists and your embed tag for typos.
+p. &mdash; In which case check the script exists and your embed tag for typos.
 
 
 
@@ -78,5 +78,5 @@ p. To use your own language see the "spf_js_textpack":https://raw.github.com/spi
 
 h2. Version history
 
-* 0.2 - April 2012 &#42; French &amp; German Textpacks added (thanks Patrick &amp; Uli); &#42; added compatibility with the syntax-highlighting "Codemirror admin theme":https://github.com/spiffin/CodeMirrorTextpattern.
+* 0.2 - April 2012 &#42; French &amp; German Textpacks added (thanks Patrick &amp; Uli); &#42; added compatibility with the syntax-highlighting "spf_codemirror":https://github.com/spiffin/spf_codemirror.
 * 0.1 - April 2012 &#42; first release.

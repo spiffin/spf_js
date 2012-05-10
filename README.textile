@@ -1,0 +1,82 @@
+h1. spf_js
+
+p. JavaScript management plugin for "Textpattern":http://www.textpattern.com/.
+
+p. Create, edit and delete scripts in Textpattern admin and export on save to external files.
+
+p. REQUIRES: Texpattern 4.4.1 and PHP 5.
+
+p. Please read the instructions and notes below before use.
+
+p. A combination of two previously-released plugins: stm_javascript by Stanislav Müller and rvm_css by Ruud van Melick. Thanks to the original authors and to Jukka (Gocom) and Stef (Bloke) for invaluable feedback.
+
+p. Features include exporting scripts as files to a directory, optional "type" attribute @type="text/javascript"@ and changing the tag argument from @n=@ to @name=@ to bring it in line with default css syntax.
+
+p. Re-written for Textpattern 4.4.1 to mimic the Presentation &gt; Style tab.
+
+p. "DOWNLOAD":https://raw.github.com/spiffin/spf_js/master/spf_js_v0.2.txt
+
+
+
+h2. Instructions:
+
+# Create a directory for the static JavaScript files in the root of your textpattern installation. You should make sure that <span class="caps">PHP</span> is able to write to that directory.
+# Visit the Advanced Preferences (Admin &gt; Preferences &gt; Advanced) and make sure the "JavaScript directory" preference contains the directory you created in step 1 (by default 'js'). This path is relative path to the directory of your root Textpattern installation.
+# Activate this plugin.
+# Go to Presentation &gt; JavaScript and create JavaScripts you'd like to embed within your page templates.
+# JavaScript files are stored in the database (for easy management and editing) and, on save, exported to a directory in your website where they can be referenced (as external JavaScript) with the tag below.
+
+
+
+h2. Tags:
+
+@<txp:spf_js /> (embeds the default JavaScript file)@
+
+@<txp:spf_js name="myscript" /> (embeds the JavaScript file named "myscript")@
+
+h3. HTML output:
+
+@<script src="http://mysite.com/js/myscript.js"></script>@
+
+h3. "type" attribute
+
+p. By default the plugin outputs a script tag without the ""type" attribute":http://www.w3schools.com/html5/tag_script.asp (required in XHTML/HTML4 but optional in HTML5).
+
+p. To include a "type" attribute just use the @type="1"@ argument:
+
+@<txp:spf_js name="myscript" type="1" />@
+
+p. Outputs:
+
+@<script type="text/javascript" src="http://mysite.com/js/myscript.js"></script>@
+
+
+
+h2. Notes:
+
+# Don't use non-alphanumeric characters in script names (if you try to they'll be stripped).
+# The plugin will convert your script names to lowercase.
+# The plugin will throw an error if you try to embed a non-existent script - similar to: @Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"@.
+
+p. In which case check the script exists and your embed tag for typos.
+
+
+
+h2. stm_javascript
+
+p. If stm_javascript is installed and activated you will see two JavaScript tabs in Presentation - one named 'Javascript' (stm_javascript - with lowercase 's') and another 'JavaScript' (spf_js - uppercase 'S'). You can copy and paste scripts from stm_javascript to spf_js - and then disable stm_javascript. It's not advisable to run both plugins simultaneously.
+
+
+
+h2. Language support (Textpack)
+
+p. This plugin uses an English Textpack by default and installs both French (fr-fr) and German (de-de) Textpacks.
+
+p. To use your own language see the "spf_js_textpack":https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt file in this repository.
+
+
+
+h2. Version history
+
+* 0.2 - April 2012 &#42; French &amp; German Textpacks added (thanks Patrick &amp; Uli); &#42; added compatibility with the syntax-highlighting "Codemirror admin theme":https://github.com/spiffin/CodeMirrorTextpattern.
+* 0.1 - April 2012 &#42; first release.

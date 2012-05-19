@@ -14,7 +14,7 @@ p. Features include exporting scripts as files to a directory, optional "type" a
 
 p. Re-written for Textpattern 4.4.1 to mimic the Presentation &gt; Style tab.
 
-p. "DOWNLOAD":https://raw.github.com/spiffin/spf_js/master/spf_js_v0.2.txt
+p. "DOWNLOAD":https://raw.github.com/spiffin/spf_js/master/spf_js.txt
 
 
 
@@ -78,5 +78,12 @@ p. To use your own language see the "spf_js_textpack":https://raw.github.com/spi
 
 h2. Version history
 
-* 0.2 - April 2012 &#42; French &amp; German Textpacks added (thanks Patrick &amp; Uli); &#42; added compatibility with the syntax-highlighting "spf_codemirror":https://github.com/spiffin/spf_codemirror.
-* 0.1 - April 2012 &#42; first release.
+0.3 - May 2012
+* Fixed delete issue with script names containing dots (thanks Yiannis).
+
+0.2 - April 2012
+* French &amp; German Textpacks added (thanks Patrick &amp; Uli);
+* added compatibility with the syntax-highlighting "spf_codemirror":https://github.com/spiffin/spf_codemirror.
+
+0.1 - April 2012
+*first release.

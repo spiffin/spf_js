@@ -86,4 +86,4 @@ h2. Version history
 * added compatibility with the syntax-highlighting "spf_codemirror":https://github.com/spiffin/spf_codemirror.
 
 0.1 - April 2012
-*first release.
+* first release.

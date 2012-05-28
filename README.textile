@@ -55,9 +55,13 @@ p. Outputs:
 h3. "min" attribute
 
 p. You can now minify your JavaScripts dynamically *requires "Minify":http://code.google.com/p/minify* installed in the standard (DocumentRoot/min) location.
+
 p. @<txp:spf_js name="myscript" min="1" />@
+
 p. Outputs:
+
 p. @<script src="http://mysite.com/min/f=js/myscript.js"></script>@
+
 p. (Works with or without the "type" attribute.)
 
 

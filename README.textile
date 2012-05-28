@@ -14,6 +14,8 @@ p. Features include exporting scripts as files to a directory, optional "type" a
 
 p. Re-written for Textpattern 4.4.1 to mimic the Presentation &gt; Style tab.
 
+p. *Now with support for "Minify":http://code.google.com/p/minify*.
+
 p. "DOWNLOAD":https://raw.github.com/spiffin/spf_js/master/spf_js.txt
 
 
@@ -25,7 +27,7 @@ h2. Instructions:
 # Activate this plugin.
 # Go to Presentation &gt; JavaScript and create JavaScripts you'd like to embed within your page templates.
 # JavaScript files are stored in the database (for easy management and editing) and, on save, exported to a directory in your website where they can be referenced (as external JavaScript) with the tag below.
-
+# For minification you must install "Minify":http://code.google.com/p/minify - just upload the 'min' directory to your web root for basic usage.</a>
 
 
 h2. Tags:
@@ -50,6 +52,14 @@ p. Outputs:
 
 @<script type="text/javascript" src="http://mysite.com/js/myscript.js"></script>@
 
+h3. "min" attribute
+
+p. You can now minify your JavaScripts dynamically *requires "Minify":http://code.google.com/p/minify* installed in the standard (DocumentRoot/min) location.
+p. @<txp:spf_js name="myscript" min="1" />@
+p. Outputs:
+p. @<script src="http://mysite.com/min/f=js/myscript.js"></script>@
+p. (Works with or without the "type" attribute.)
+
 
 
 h2. Notes:
@@ -57,9 +67,8 @@ h2. Notes:
 # Don't use non-alphanumeric characters in script names (if you try to they'll be stripped).
 # The plugin will convert your script names to lowercase.
 # The plugin will throw an error if you try to embed a non-existent script - similar to: @Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"@.
-
-p. &mdash; In which case check the script exists and your embed tag for typos.
-
+# &mdash; In which case check the script exists and your embed tag for typos.
+# "min" attribute assumes Minify is installed in standard (DocumentRoot/min) location.
 
 
 h2. stm_javascript
@@ -77,6 +86,9 @@ p. To use your own language see the "spf_js_textpack":https://raw.github.com/spi
 
 
 h2. Version history
+
+0.4 - May 2012
+* Added "Minify":http://code.google.com/p/minify support.
 
 0.3 - May 2012
 * Fixed delete issue with script names containing dots (thanks Yiannis).

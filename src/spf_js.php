@@ -17,7 +17,7 @@ $plugin['name'] = 'spf_js';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.3';
+$plugin['version'] = '0.4';
 $plugin['author'] = 'Simon Finch';
 $plugin['author_uri'] = 'https://github.com/spiffin/spf_js';
 $plugin['description'] = 'JavaScript management';
@@ -104,7 +104,7 @@ if (!defined('txpinterface'))
  * Licensed under GNU General Public License version 2
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Version 0.3 -- 19 May 2012
+ * Version 0.4 -- 28 May 2012
  *
  * Many thanks to Jukka for invaluable feedback
  */
@@ -225,7 +225,8 @@ function spf_js($atts) {
 
     extract(lAtts(array(
         'name' => 'default',
-        'type' => ''
+        'type' => '',
+        'min' => ''
     ), $atts));
 
     $name = strtolower(sanitizeForUrl($name));
@@ -238,19 +239,23 @@ function spf_js($atts) {
 
     }
 
-    if (!$type) {
+    if (!$type && !$min) {
 
         return '<script src="'.htmlspecialchars(hu.$prefs['spf_js_dir'].'/'.$name).'.js"></script>';
 
-    } else {
+    } elseif ($min && !$type) {
+
+        return '<script src="'.htmlspecialchars(hu.'min/f='.$prefs['spf_js_dir'].'/'.$name).'.js"></script>';
+
+    } elseif ($type && !$min) {
 
         return '<script type="text/javascript" src="'.htmlspecialchars(hu.$prefs['spf_js_dir'].'/'.$name).'.js"></script>';
 
+    } elseif ($type && $min) {
+
+        return '<script type="text/javascript" src="'.htmlspecialchars(hu.'min/f='.$prefs['spf_js_dir'].'/'.$name).'.js"></script>';
+
     }
-
-    // To minify output (requires Minify):
-    // return '<script src="'.htmlspecialchars(hu.'min/f='.$prefs['spf_js_dir'].'/'.$name).'.js"></script>';
-
 }
 
 /**
@@ -509,18 +514,20 @@ if (0) {
 ?>
 <!--
 # --- BEGIN PLUGIN HELP ---
-<h1 id="spf_js-javascript-management">spf_js: JavaScript management</h1>
+<h1>spf_js: JavaScript management</h1>
 
 <p>Create, edit and delete scripts in Textpattern admin and export on save to external files.</p>
 <p>REQUIRES: Texpattern 4.4.1 and PHP 5.</p>
+<p>Minification requires <a href="http://code.google.com/p/minify">Minify</a>.</p>
 <p>Please read the instructions and notes below before use.</p>
 <p>Latest version: <a href="https://github.com/spiffin/spf_js">spf_js GitHub repository</a>.</p>
 <p>A combination of two previously-released plugins: stm_javascript by Stanislav Müller and rvm_css by Ruud van Melick. Thanks to the original authors and to Jukka (Gocom) and Stef (Bloke) for invaluable feedback.</p>
 <p>Features include exporting scripts as files to a directory, optional “type” attribute <code>type=&quot;text/javascript&quot;</code> and changing the tag argument from <code>n=</code> to <code>name=</code> to bring it in line with default css syntax. Re-written for Textpattern 4.4.1 to mimic the Presentation &amp;gt; Style tab.</p>
+<p>Now with support for <a href="http://code.google.com/p/minify">Minify</a>.</p>
 
-<hr />
+<br /><hr /><br />
 
-<h2 id="instructions">Instructions:</h2>
+<h2>Instructions:</h2>
 
 <ol>
 <li>Create a directory for the static JavaScript files in the root of your textpattern installation. You should make sure that <span class="caps">PHP</span> is able to write to that directory.</li>
@@ -528,52 +535,65 @@ if (0) {
 <li>Activate this plugin.</li>
 <li>Go to Presentation &amp;gt; JavaScript and create JavaScripts you’d like to embed within your page templates.</li>
 <li>JavaScript files are stored in the database (for easy management and editing) and, on save, exported to a directory in your website where they can be referenced (as external JavaScript) with the tag below.</li>
+<li>For minification you must install <a href="http://code.google.com/p/minify">Minify</a> - just upload the 'min' directory to your web root for basic usage.</a></li>
 </ol>
 
-<hr />
+<br /><hr /><br />
 
-<h2 id="tags">Tags:</h2>
+<h2>Tags:</h2>
 
 <p><code>&lt;txp:spf_js /&gt; (embeds the default JavaScript file)</code></p>
 <p><code>&lt;txp:spf_js name=&quot;myscript&quot; /&gt; (embeds the JavaScript file named &quot;myscript&quot;)</code></p>
 
-<h3 id="html-output">HTML output:</h3>
+<h3>HTML output:</h3>
 <p><code>&lt;script src=&quot;http://mysite.com/js/myscript.js&quot;&gt;&lt;/script&gt;</code></p>
 
-<h3 id="type-attribute">“type” attribute</h3>
-<p>By default the plugin outputs a script tag without the <a href="http://www.w3schools.com/html5/tag_script.asp">“type” attribute</a> (required in XHTML/HTML4 but optional in HTML5).</p>
-<p>To include a “type” attribute just use the <code>type=&quot;1&quot;</code> argument:</p>
+<h3>"type" attribute</h3>
+<p>By default the plugin outputs a script tag without the <a href="http://www.w3schools.com/html5/tag_script.asp">"type" attribute</a> (required in XHTML/HTML4 but optional in HTML5).</p>
+<p>To include a "type" attribute just use the <code>type=&quot;1&quot;</code> argument:</p>
 <p><code>&lt;txp:spf_js name=&quot;myscript&quot; type=&quot;1&quot; /&gt;</code></p>
 <p>Outputs:</p>
 <p><code>&lt;script type=&quot;text/javascript&quot; src=&quot;http://mysite.com/js/myscript.js&quot;&gt;&lt;/script&gt;</code></p>
 
-<hr />
+<h3>"min" attribute</h3>
+<p>You can now minify your JavaScripts dynamically <strong>requires <a href="http://code.google.com/p/minify">Minify</a></strong> installed in the standard (DocumentRoot/min) location.</p>
+<p><code>&lt;txp:spf_js name=&quot;myscript&quot; min=&quot;1&quot; /&gt;</code></p>
+<p>Outputs:</p>
+<p><code>&lt;script src=&quot;http://mysite.com/min/f=js/myscript.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>(Works with or without the "type" attribute.)</p>
 
-<h2 id="notes">Notes:</h2>
+<br /><hr /><br />
+
+<h2>Notes:</h2>
 
 <ol>
 <li>Don’t use non-alphanumeric characters in script names (if you try to they’ll be stripped).</li>
 <li>The plugin will convert your script names to lowercase.</li>
 <li>The plugin will throw an error if you try to embed a non-existent script - similar to: <code>Tag error:   -&gt;  Textpattern Notice: The requested resource was not found. &quot;script_name&quot;</code>.</li>
+<li>&mdash; In which case check the script exists and your embed tag for typos.</li>
+<li>"min" attribute assumes Minify is installed in standard (DocumentRoot/min) location.</li>
 </ol>
-<p>&amp;mdash; In which case check the script exists and your embed tag for typos.</p>
 
-<hr />
+<br /><hr /><br />
 
-<h2 id="stm_javascript">stm_javascript</h2>
+<h2>stm_javascript</h2>
 
 <p>If stm_javascript is installed and activated you will see two JavaScript tabs in Presentation - one named ‘Javascript’ (stm_javascript - with lowercase ’s’) and another ‘JavaScript’ (spf_js - uppercase ‘S’). You can copy and paste scripts from stm_javascript to spf_js - and then disable stm_javascript. It’s not advisable to run both plugins simultaneously.</p>
 
-<hr />
+<br /><hr /><br />
 
-<h2 id="language-support-textpack">Language support (Textpack)</h2>
+<h2>Language support (Textpack)</h2>
 
 <p>This plugin uses an English Textpack by default and installs both French (fr-fr) and German (de-de) Textpacks.</p>
 <p>To use your own language see the <a href="https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt">spf_js_textpack</a> file on GitHub.</p>
 
-<hr />
+<br /><hr /><br />
 
-<h2 id="version-history">Version history</h2>
+<h2>Version history</h2>
+
+<p>0.4 - May 2012</p>
+<ul>
+<li>Added <a href="http://code.google.com/p/minify">Minify</a> support.</li>
 
 <p>0.3 - May 2012</p>
 <ul>

@@ -17,7 +17,7 @@ $plugin['name'] = 'spf_js';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.4';
+$plugin['version'] = '0.41';
 $plugin['author'] = 'Simon Finch';
 $plugin['author_uri'] = 'https://github.com/spiffin/spf_js';
 $plugin['description'] = 'JavaScript management';
@@ -90,6 +90,20 @@ spf_script_name_required => Bitte vergeben Sie einen Namen für Ihr Script.
 spf_script_updated => Script <strong>{name}</strong> wurde aktualisiert.
 spf_script_deleted => Script <strong>{name}</strong> wurde gelöscht.
 spf_cannot_delete_default_script => Script <strong>default</strong> konnte nicht gelöscht werden.
+#@language it-it
+spf_javascript => JavaScript
+spf_js_dir => JavaScript directory
+spf_script_name => Nome dello script
+spf_edit_script => Stai modificando lo script
+spf_copy_script => &#8230;o copia lo script con nome
+spf_all_scripts => Tutti gli script
+spf_create_new_script => Crea nuovo script
+spf_script_created => Script <strong>{name}</strong> creato.
+spf_script_exists => Lo script <strong>{name}</strong> esiste gi&agrave;.
+spf_script_name_required => Per favore inserisci un nome per lo script
+spf_script_updated => Script <strong>{name}</strong> aggiornato.
+spf_script_deleted => Script <strong>{name}</strong> cancellato.
+spf_cannot_delete_default_script => Lo script <strong>default</strong> non pu&ograve; essere cancellato.
 EOT;
 
 if (!defined('txpinterface'))
@@ -104,7 +118,7 @@ if (!defined('txpinterface'))
  * Licensed under GNU General Public License version 2
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Version 0.4 -- 28 May 2012
+ * Version 0.41 -- 20 June 2012
  *
  * Many thanks to Jukka for invaluable feedback
  */
@@ -584,12 +598,16 @@ if (0) {
 
 <h2>Language support (Textpack)</h2>
 
-<p>This plugin uses an English Textpack by default and installs both French (fr-fr) and German (de-de) Textpacks.</p>
+<p>This plugin uses an English Textpack by default and installs French (fr-fr), German (de-de) and Italian (it-it) Textpacks.</p>
 <p>To use your own language see the <a href="https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt">spf_js_textpack</a> file on GitHub.</p>
 
 <br /><hr /><br />
 
 <h2>Version history</h2>
+
+<p>0.41 - June 2012</p>
+<ul>
+<li>Italian Textpack added (thanks Marco).</li>
 
 <p>0.4 - May 2012</p>
 <ul>
@@ -601,7 +619,7 @@ if (0) {
 </ul>
 <p>0.2 - April 2012</p>
 <ul>
-<li>French &amp;amp; German Textpacks added (thanks Patrick &amp;amp; Uli);</li>
+<li>French and German Textpacks added (thanks Patrick and Uli);</li>
 <li>added compatibility with the syntax-highlighting <a href="https://github.com/spiffin/spf_codemirror">spf_codemirror</a>.</li>
 </ul>
 

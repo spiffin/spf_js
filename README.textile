@@ -83,13 +83,16 @@ p. If stm_javascript is installed and activated you will see two JavaScript tabs
 
 h2. Language support (Textpack)
 
-p. This plugin uses an English Textpack by default and installs both French (fr-fr) and German (de-de) Textpacks.
+p. This plugin uses an English Textpack by default and installs French (fr-fr), German (de-de) and Italian (it-it) Textpacks.
 
 p. To use your own language see the "spf_js_textpack":https://raw.github.com/spiffin/spf_js/master/spf_js_textpack.txt file in this repository.
 
 
 
 h2. Version history
+
+0.41 - June 2012
+* Italian Textpack added (thanks Marco);
 
 0.4 - May 2012
 * Added "Minify":http://code.google.com/p/minify support.

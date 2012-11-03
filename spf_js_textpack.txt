@@ -14,6 +14,7 @@ Note: Textpacks will be removed when you delete this plugin.
 #@spf_js
 #@language en-gb
 spf_javascript => JavaScript
+spf_tab_scripts => JavaScripts
 spf_js_dir => JavaScript directory
 spf_script_name => Name for this script
 spf_edit_script => You are editing script

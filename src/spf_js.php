@@ -386,8 +386,7 @@ function spf_js_edit_raw() {
             form(
                 '<div id="main_content">'.
                 $buttons.
-                //'<textarea id="spf_js" class="code" name="spf_js" cols="78" rows="32" style="margin-top: 6px; width: 700px; height: 515px;">'.txpspecialchars($thejs).'</textarea>'.br.
-                '<textarea id="spf_js" class="code" name="spf_js" cols="'.INPUT_LARGE.'" rows="'.INPUT_REGULAR.'">'.txpspecialchars($thejs).'</textarea>'.
+                '<textarea id="spf_js" class="code" name="spf_js" cols="'.INPUT_LARGE.'" rows="'.INPUT_REGULAR.'" style="height: 39.25em;">'.txpspecialchars($thejs).'</textarea>'.
                 '<p>'.fInput('submit','',gTxt('save'),'publish').
                 eInput('spf_js').sInput('spf_js_save').
                 hInput('name',$name).'</p>'

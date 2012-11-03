@@ -49,6 +49,7 @@ $plugin['flags'] = '2';
 $plugin['textpack'] = <<< EOT
 #@spf_js
 spf_javascript => JavaScript
+spf_tab_script => JavaScripts
 spf_js_dir => JavaScript directory
 spf_script_name => Name for this script
 spf_edit_script => You are editing script
@@ -63,6 +64,7 @@ spf_script_deleted => Script <strong>{name}</strong> deleted.
 spf_cannot_delete_default_script => Script <strong>default</strong> cannot be deleted.
 #@language fr-fr
 spf_javascript => JavaScript
+spf_tab_script => JavaScripts
 spf_js_dir => Répertoire JavaScript
 spf_script_name => Nom de ce script
 spf_edit_script => Vous éditez le script
@@ -77,6 +79,7 @@ spf_script_deleted => Le script <strong>{name}</strong> a été supprimé.
 spf_cannot_delete_default_script => Le script <strong>default</strong> ne peut pas être supprimé.
 #@language de-de
 spf_javascript => JavaScript
+spf_tab_script => JavaScripts
 spf_js_dir => JavaScript-Verzeichnis
 spf_script_name => Name dieses Script
 spf_edit_script => Sie bearbeiten das Script
@@ -92,6 +95,7 @@ spf_script_deleted => Script <strong>{name}</strong> wurde gelöscht.
 spf_cannot_delete_default_script => Script <strong>default</strong> konnte nicht gelöscht werden.
 #@language it-it
 spf_javascript => JavaScript
+spf_tab_script => JavaScripts
 spf_js_dir => JavaScript directory
 spf_script_name => Nome dello script
 spf_edit_script => Stai modificando lo script

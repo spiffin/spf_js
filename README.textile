@@ -93,6 +93,9 @@ p. To use your own language see the "spf_js_textpack":https://raw.github.com/spi
 
 h2. Version history
 
+0.51 - November 2012
+* Fixed issue setting prefs in 4.5.x.
+
 0.5 - November 2012
 * Rewritten for Textpattern 4.5.x.
 

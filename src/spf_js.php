@@ -17,7 +17,7 @@ $plugin['name'] = 'spf_js';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.5';
+$plugin['version'] = '0.51';
 $plugin['author'] = 'Simon Finch';
 $plugin['author_uri'] = 'https://github.com/spiffin/spf_js';
 $plugin['description'] = 'JavaScript management';
@@ -122,7 +122,7 @@ if (!defined('txpinterface'))
  * Licensed under GNU General Public License version 2
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Version 0.5 -- 2 November 2012
+ * Version 0.51 -- 7 November 2012
  *
  * Many thanks to Jukka for invaluable feedback
  */
@@ -132,21 +132,20 @@ if (@txpinterface == 'admin') {
     add_privs('spf_js', '1,2');
     register_tab('presentation', 'spf_js', gTxt('spf_javascript'));
     register_callback('spf_js_event', 'spf_js');
-    register_callback('spf_js_install', 'plugin_lifecycle.spf_js');
+    register_callback('spf_js_install', 'plugin_lifecycle.spf_js', 'installed');
+    //register_callback('spf_js_install', 'plugin_lifecycle.spf_js', 'enabled');
+    register_callback('spf_js_remove', 'plugin_lifecycle.spf_js', 'deleted');
 
 }
 
 /**
- * Installer function
- * @param string $event Admin-side event
- * @param string $step Admin-side, plugin-lifecycle step
+ * Removal function
  */
 
-function spf_js_install($event='', $step='') {
+function spf_js_remove($event, $step) {
+global $prefs, $step;
 
-    global $prefs;
-
-    if($step == 'deleted') {
+    if(isset($prefs['spf_js_dir'])) {
 
         safe_delete(
             'txp_prefs',
@@ -164,19 +163,21 @@ function spf_js_install($event='', $step='') {
             "event = 'spf_js'"
         );
 
-        return;
-
     }
+
+}
+
+/**
+ * Installer function
+ */
+
+function spf_js_install($event, $step) {
+global $prefs, $step;
 
     // Version check
     if (txp_version >= '4.5.0') {
-        return;
-    } else {
-        return 'The plugin spf_js version 0.5 requires Textpattern 4.5.1 - you are running Textpattern ' . txp_version . ' - please delete spf_js.';
-    }
 
     /* Create table, prefs and default.js when spf_js_dir isn't set */
-
     if(!isset($prefs['spf_js_dir'])) {
 
         safe_query(
@@ -204,6 +205,14 @@ function spf_js_install($event='', $step='') {
             position=21"
         );
     }
+
+
+// If Txp version is less than 4.5.x return message.
+
+    } else {
+        return 'The plugin spf_js version 0.5 requires Textpattern 4.5.1 - you are running Textpattern ' . txp_version . ' - please delete spf_js.';
+    }
+
 }
 
 /**
@@ -620,6 +629,10 @@ if (0) {
 
 <h2>Version history</h2>
 
+<p>0.51 - November 2012</p>
+<ul>
+<li>Fixed issue setting prefs in 4.5.x.</li>
+</ul>
 <p>0.5 - November 2012</p>
 <ul>
 <li>Rewritten for Textpattern 4.5.x.</li>

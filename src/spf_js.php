@@ -152,9 +152,10 @@ global $prefs, $step;
             "name='spf_js_dir'"
         );
 
-        @safe_query(
-            'DROP TABLE IF EXISTS '.safe_pfx('spf_js')
-        );
+        // Don't drop the table - just in case.
+        //@safe_query(
+        //    'DROP TABLE IF EXISTS '.safe_pfx('spf_js')
+        //);
 
         // delete the Textpack
 

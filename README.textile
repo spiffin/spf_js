@@ -1,5 +1,7 @@
 h1. spf_js
 
+p. *I'm no longer able to develop this plugin due to ill health. If anyone would like to take over, message me, and I'll transfer the source.*
+
 p. JavaScript management plugin for "Textpattern":http://www.textpattern.com/.
 
 p. Create, edit and delete scripts in Textpattern admin and export on save to external files.

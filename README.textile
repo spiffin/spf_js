@@ -14,11 +14,9 @@ p. A combination of two previously-released plugins: stm_javascript by Stanislav
 
 p. Features include exporting scripts as files to a directory, optional "type" attribute @type="text/javascript"@ and changing the tag argument from @n=@ to @name=@ to bring it in line with default css syntax.
 
-p. Re-written for Textpattern 4.5.1.
+p. Re-written for Textpattern 4.7*
 
 p. *For Textpattern 4.4.1 and below use "this version":https://github.com/spiffin/spf_js/blob/master/spf_js_0.41.txt.*
-
-p. *Now with support for "Minify":http://code.google.com/p/minify*.
 
 p. "DOWNLOAD":https://raw.github.com/spiffin/spf_js/master/spf_js.txt
 
@@ -31,7 +29,6 @@ h2. Instructions:
 # Activate this plugin.
 # Go to Presentation > JavaScript and create JavaScripts you'd like to embed within your page templates.
 # JavaScript files are stored in the database (for easy management and editing) and, on save, exported to a directory in your website where they can be referenced (as external JavaScript) with the tag below.
-# For minification you must install "Minify":http://code.google.com/p/minify - just upload the 'min' directory to your web root for basic usage.</a>
 
 
 h2. Tags:
@@ -56,18 +53,6 @@ p. Outputs:
 
 @<script type="text/javascript" src="http://mysite.com/js/myscript.js"></script>@
 
-h3. "min" attribute
-
-p. You can now minify your JavaScripts dynamically *requires "Minify":http://code.google.com/p/minify* installed in the standard (DocumentRoot/min) location.
-
-p. @<txp:spf_js name="myscript" min="1" />@
-
-p. Outputs:
-
-p. @<script src="http://mysite.com/min/f=js/myscript.js"></script>@
-
-p. (Works with or without the "type" attribute.)
-
 
 
 h2. Notes:
@@ -76,7 +61,6 @@ h2. Notes:
 # The plugin will convert your script names to lowercase.
 # The plugin will throw an error if you try to embed a non-existent script - similar to: @Tag error:   ->  Textpattern Notice: The requested resource was not found. "script_name"@.
 # &mdash; In which case check the script exists and your embed tag for typos.
-# "min" attribute assumes Minify is installed in standard (DocumentRoot/min) location.
 
 
 h2. stm_javascript
@@ -94,6 +78,10 @@ p. To use your own language see the "spf_js_textpack":https://raw.github.com/spi
 
 
 h2. Version history
+
+0.52 - 21 May 2019
+* Fixed issue setting prefs in 4.7.x.
+* Removed "Minify":href="http://code.google.com/p/minify support - did anyone ever use it?
 
 0.51 - November 2012
 * Fixed issue setting prefs in 4.5.x.

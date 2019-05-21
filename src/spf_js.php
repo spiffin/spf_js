@@ -197,8 +197,7 @@ global $prefs, $step;
 
         safe_insert(
             'txp_prefs',
-            "event='admin',
-            name='spf_js_dir',
+            "name='spf_js_dir',
             val='js',
             type=1,
             event='admin',

@@ -17,7 +17,7 @@ $plugin['name'] = 'spf_js';
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 1;
 
-$plugin['version'] = '0.51';
+$plugin['version'] = '0.52';
 $plugin['author'] = 'Simon Finch';
 $plugin['author_uri'] = 'https://github.com/spiffin/spf_js';
 $plugin['description'] = 'JavaScript management';
@@ -122,7 +122,7 @@ if (!defined('txpinterface'))
  * Licensed under GNU General Public License version 2
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Version 0.51 -- 7 November 2012
+ * Version 0.52 -- 21 May 2019
  *
  * Many thanks to Jukka for invaluable feedback
  */
@@ -197,14 +197,15 @@ global $prefs, $step;
 
         safe_insert(
             'txp_prefs',
-            "prefs_id=1,
+            "event='admin',
             name='spf_js_dir',
             val='js',
             type=1,
             event='admin',
             html='text_input',
-            position=21"
+            position=35"
         );
+        
     }
 
 
@@ -560,7 +561,7 @@ if (0) {
 <p>A combination of two previously-released plugins: stm_javascript by Stanislav Müller and rvm_css by Ruud van Melick. Thanks to the original authors and to Jukka (Gocom) and Stef (Bloke) for invaluable feedback.</p>
 <p>Features include exporting scripts as files to a directory, optional “type” attribute <code>type=&quot;text/javascript&quot;</code> and changing the tag argument from <code>n=</code> to <code>name=</code> to bring it in line with default css syntax.</p>
 
-<p>Re-written for Textpattern 4.5.1.</p>
+<p>Re-written for Textpattern 4.5.1 and above.</p>
 
 <p><strong>For Textpattern 4.4.1 and below use <a href="https://raw.github.com/spiffin/spf_js/master/spf_js_0.41.txt">this version</a>.</strong></p>
 
@@ -630,6 +631,10 @@ if (0) {
 
 <h2>Version history</h2>
 
+<p>0.52 - 21 May 2019</p>
+<ul>
+<li>Fixed issue setting prefs in 4.7.x.</li>
+</ul>
 <p>0.51 - November 2012</p>
 <ul>
 <li>Fixed issue setting prefs in 4.5.x.</li>

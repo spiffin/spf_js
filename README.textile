@@ -12,7 +12,7 @@ p. Please read the instructions and notes below before use.
 
 p. A combination of two previously-released plugins: stm_javascript by Stanislav Müller and rvm_css by Ruud van Melick. Thanks to the original authors and to Jukka (Gocom) and Stef (Bloke) for invaluable feedback.
 
-p. Features include exporting scripts as files to a directory, optional "type" attribute @type="text/javascript"@ and changing the tag argument from @n=@ to @name=@ to bring it in line with default css syntax.
+p. Features include exporting scripts as files to a directory, optional "type" attribute @type="text/javascript"@ and changing the tag argument from @n=@ to @name=@ to bring it in line with default "css syntax":https://www.scaler.com/topics/css/css-syntax/.
 
 p. Re-written for Textpattern 4.7*
 
